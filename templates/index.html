@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Teacher-Student Simulation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>AI Teacher-Student Q-Learning Project</h1>
+        <p>This project demonstrates an adaptive learning environment where an AI Teacher and an AI Student interact, learn, and evolve. Both agents use Large Language Models (LLMs) as their 'brains' to dynamically generate problems, answers, feedback, and reflections. The system aims to 'learn how to learn/teach' by continuously adapting its approaches based on performance and generated experiences.</p>
+        <hr>
+    </header>
+
+    <main>
+        <div class="controls">
+            <label for="num_rounds">Number of Rounds:</label>
+            <input type="number" id="num_rounds" value="10" min="1">
+
+            <label for="topics">Topics (comma-separated):</label>
+            <input type="text" id="topics" value="Reinforcement Learning,Neural Networks,Generative AI,Computer Vision">
+
+            <label for="evolution_interval">Evolution Interval:</label>
+            <input type="number" id="evolution_interval" value="5" min="1">
+            
+            <button id="start_simulation">Start Simulation</button>
+        </div>
+
+        <div class="log-container">
+            <h2>Simulation Log</h2>
+            <div id="log_display" class="log-display"></div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/socket.io.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
