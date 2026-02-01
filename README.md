@@ -1,5 +1,7 @@
 # Q-Learning Teacher-Student Model with Evolving Agents
 
+*** this is another unfinished idea that is intesting but no time for this now.  Worthy of looking at again later ****
+
 ## Project Overview
 
 This project implements a novel approach to Q-learning where a teacher agent and a student agent
